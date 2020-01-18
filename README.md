@@ -1,5 +1,7 @@
 # Telemetry
 
+[![Continous Integration](https://gitlab.com/project-alice-assistant/skills/skill_Telemetry/badges/master/pipeline.svg)](https://gitlab.com/project-alice-assistant/skills/skill_Telemetry/pipelines/latest)
+
 ### Download
 
 ##### > WGET method
