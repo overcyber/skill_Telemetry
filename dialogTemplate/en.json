@@ -4,7 +4,7 @@
 	"description": "Access your stored telemetry data",
 	"slotTypes": [
 		{
-			"name": "TelemetryType",
+			"name": "Alice/TelemetryType",
 			"matchingStrictness": null,
 			"automaticallyExtensible": false,
 			"useSynonyms": true,
