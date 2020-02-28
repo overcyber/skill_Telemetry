@@ -135,14 +135,14 @@
 					"name": "TelemetryType",
 					"description": "The type of data the user wants",
 					"required": false,
-					"type": "TelemetryType",
+					"type": "Alice/TelemetryType",
 					"missingQuestion": ""
 				},
 				{
 					"name": "Room",
 					"description": "The room where the data is from",
 					"required": false,
-					"type": "Room",
+					"type": "Alice/Room",
 					"missingQuestion": ""
 				}
 			]
@@ -162,7 +162,7 @@
 					"name": "TelemetryType",
 					"description": "The type of data the user wants",
 					"required": false,
-					"type": "TelemetryType",
+					"type": "Alice/TelemetryType",
 					"missingQuestion": ""
 				}
 			]

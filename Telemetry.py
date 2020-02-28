@@ -42,7 +42,7 @@ class Telemetry(AliceSkill):
 				sessionId=session.sessionId,
 				text=self.randomTalk('noType'),
 				intentFilter=[Intent('AnswerTelemetryType')],
-				slot='TelemetryType'
+				slot='Alice/TelemetryType'
 			)
 
 		data = self.TelemetryManager.getData(siteId=siteId, ttype=TelemetryType(telemetryType))
