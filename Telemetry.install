@@ -1,6 +1,6 @@
 {
 	"name": "Telemetry",
-	"version": "1.1.2",
+	"version": "1.1.3",
 	"icon": "fab fa-battle-net",
 	"category": "alice",
 	"author": "ProjectAlice",
@@ -12,7 +12,8 @@
 	"conditions": {
 		"lang": [
 			"en",
-			"de"
+			"de",
+			"it"
 		],
 		"activeManager": ["TelemetryManager"]
 	}
