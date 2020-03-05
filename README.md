@@ -2,13 +2,6 @@
 
 [![Continous Integration](https://gitlab.com/project-alice-assistant/skills/skill_Telemetry/badges/master/pipeline.svg)](https://gitlab.com/project-alice-assistant/skills/skill_Telemetry/pipelines/latest)
 
-### Download
-
-##### > WGET method
-```bash
-wget http://skills.projectalice.ch/Telemetry -O ~/ProjectAlice/system/skillInstallTickets/Telemetry.install
-```
-
 ### Description
 Access your stored telemetry data
 
