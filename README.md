@@ -5,7 +5,7 @@
 ### Description
 Access your stored telemetry data
 
-- Version: 1.1.4
+- Version: 1.1.5
 - Author: ProjectAlice
 - Maintainers: Psychokiller1888, maxbachmann
 - Alice minimum Version: 1.0.0-a5
