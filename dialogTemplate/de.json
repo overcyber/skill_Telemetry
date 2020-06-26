@@ -142,7 +142,7 @@
 					"name": "Room",
 					"description": "The room where the data is from",
 					"required": false,
-					"type": "Alice/Room",
+					"type": "Alice/Location",
 					"missingQuestion": ""
 				}
 			]

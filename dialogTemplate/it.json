@@ -134,7 +134,7 @@
 					"name": "Room",
 					"description": "La stanza di interesse",
 					"required": false,
-					"type": "Alice/Room",
+					"type": "Alice/Location",
 					"missingQuestion": ""
 				}
 			]
