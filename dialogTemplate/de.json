@@ -119,16 +119,16 @@
 			"enabledByDefault": true,
 			"utterances": [
 				"Was ist die {Temperatur:=>TelemetryType}",
-				"Was ist die {Feuchtigkeit:=>TelemetryType} {draußen:=>Room}",
-				"Nenne mir die {Lautstärke:=>TelemetryType} im {Wohnzimmer:=>Room}",
+				"Was ist die {Feuchtigkeit:=>TelemetryType} {draußen:=>Location}",
+				"Nenne mir die {Lautstärke:=>TelemetryType} im {Wohnzimmer:=>Location}",
 				"Wie viel {regnet:=>TelemetryType} es",
 				"Kannst du mir bitte die {Windstärke:=>TelemetryType} nennen",
 				"Überprüfe bitte den {uv index:=>TelemetryType} für mich",
-				"Wie viel {Kohlendioxid:=>TelemetryType} gibt es im {Schlafzimmer:=>Room}",
-				"Wie ist die {Luftqualität:=>TelemetryType} in der {Küche:=>Room}",
-				"{wie warm:=>TelemetryType} ist es in der {Küche:=>Room}",
-				"{wie kalt:=>TelemetryType} ist es {draußen:=>Room} bitte",
-				"Bitte sag mir wie {feucht:=>TelemetryType} es im {Badezimmer:=>Room} ist"
+				"Wie viel {Kohlendioxid:=>TelemetryType} gibt es im {Schlafzimmer:=>Location}",
+				"Wie ist die {Luftqualität:=>TelemetryType} in der {Küche:=>Location}",
+				"{wie warm:=>TelemetryType} ist es in der {Küche:=>Location}",
+				"{wie kalt:=>TelemetryType} ist es {draußen:=>Location} bitte",
+				"Bitte sag mir wie {feucht:=>TelemetryType} es im {Badezimmer:=>Location} ist"
 			],
 			"slots": [
 				{
@@ -139,7 +139,7 @@
 					"missingQuestion": ""
 				},
 				{
-					"name": "Room",
+					"name": "Location",
 					"description": "The room where the data is from",
 					"required": false,
 					"type": "Alice/Location",

@@ -109,18 +109,18 @@
 			"enabledByDefault": true,
 			"utterances": [
 				"what's the {temperature:=>TelemetryType}",
-				"what's the {humidity:=>TelemetryType} {outside:=>Room}",
-				"tell me the {noise:=>TelemetryType} level in the {living room:=>Room}",
+				"what's the {humidity:=>TelemetryType} {outside:=>Location}",
+				"tell me the {noise:=>TelemetryType} level in the {living room:=>Location}",
 				"how much is it {raining:=>TelemetryType}",
 				"can you please tell me the {wind strength:=>TelemetryType}",
 				"check the {uv index:=>TelemetryType} for me please",
-				"how much {carbon dioxide:=>TelemetryType} in the {bedroom:=>Room}",
-				"how is the {air quality:=>TelemetryType} in the {kitchenb:=>Room}",
-				"{how warm:=>TelemetryType} is it in the {kitchen:=>Room}",
-				"{how cold:=>TelemetryType} {outside:=>Room} please",
-				"please tell me how {humid:=>TelemetryType} it is in the {bathroom:=>Room}",
-				"what's the {temperature:=>TelemetryType} in the {living room:=>Room}",
-				"give me the {humidity:=>TelemetryType} in the {office:=>Room} please"
+				"how much {carbon dioxide:=>TelemetryType} in the {bedroom:=>Location}",
+				"how is the {air quality:=>TelemetryType} in the {kitchenb:=>Location}",
+				"{how warm:=>TelemetryType} is it in the {kitchen:=>Location}",
+				"{how cold:=>TelemetryType} {outside:=>Location} please",
+				"please tell me how {humid:=>TelemetryType} it is in the {bathroom:=>Location}",
+				"what's the {temperature:=>TelemetryType} in the {living room:=>Location}",
+				"give me the {humidity:=>TelemetryType} in the {office:=>Location} please"
 			],
 			"slots": [
 				{
@@ -131,7 +131,7 @@
 					"missingQuestion": ""
 				},
 				{
-					"name": "Room",
+					"name": "Location",
 					"description": "The room where the data is from",
 					"required": false,
 					"type": "Alice/Location",
