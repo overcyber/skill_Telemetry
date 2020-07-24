@@ -47,7 +47,7 @@ class Telemetry(AliceSkill):
 
 
 		data: tuple = self.TelemetryManager.getData(siteId=siteId, ttype=TelemetryType(telemetryType))
-
+		print(f'data is {data} and {data[0]}')
 		if data:
 			answer = f"{data[0]} {self._telemetryUnits.get(telemetryType, '')}"
 			self.endDialog(sessionId=session.sessionId, text=self.randomTalk('answerInstant').format(answer))
