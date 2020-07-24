@@ -36,7 +36,7 @@ class Telemetry(AliceSkill):
 	def telemetryIntent(self, session: DialogSession):
 		siteId = session.slotValue('Location', defaultValue=session.siteId)
 		telemetryType = session.slotValue('TelemetryType')
-		print(f'telemetry type in session is {telemetryType}')
+
 		if not telemetryType:
 			self.continueDialog(
 				sessionId=session.sessionId,
@@ -45,11 +45,10 @@ class Telemetry(AliceSkill):
 				slot='Alice/TelemetryType'
 			)
 
-		data = self.TelemetryManager.getData(siteId=siteId, ttype=TelemetryType(telemetryType))
-		data = tuple(data)
-		print(f'data is now {data[0]}')
+
+		data: tuple = self.TelemetryManager.getData(siteId=siteId, ttype=TelemetryType(telemetryType))
+
 		if data:
-		#if data and 'value' in data:
 			answer = f"{data[0]} {self._telemetryUnits.get(telemetryType, '')}"
 			self.endDialog(sessionId=session.sessionId, text=self.randomTalk('answerInstant').format(answer))
 		else:
