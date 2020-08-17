@@ -21,7 +21,13 @@
 		"defaultValue": 1000,
 		"dataType": "integer",
 		"isSensitive": false,
-		"description": "The concentration of CO2 at which a CO2 alertis broadcaster"
+		"description": "The concentration of CO2 at which a CO2 alertis broadcasted"
+	},
+	"GasAlertHigh": {
+		"defaultValue": 200,
+		"dataType": "integer",
+		"isSensitive": false,
+		"description": "The concentration of Gas at which a Gas alert is broadcasted"
 	},
 	"HumidityAlertHigh": {
 		"defaultValue": 90,
