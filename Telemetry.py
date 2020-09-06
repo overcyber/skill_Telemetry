@@ -45,6 +45,7 @@ class Telemetry(AliceSkill):
 				intentFilter=[Intent('AnswerTelemetryType')],
 				slot='Alice/TelemetryType'
 			)
+			return
 
 		if len(locations) != 1:
 			self.continueDialog(
@@ -53,9 +54,10 @@ class Telemetry(AliceSkill):
 				intentFilter=[Intent('AnswerTelemetryType')],
 				slot='Alice/TelemetryType'
 			)
+			return
 
-
-		data = self.TelemetryManager.getData(siteId=siteId, ttype=TelemetryType(telemetryType))
+		# siteId=locations[0].name,
+		data = self.TelemetryManager.getData(ttype=TelemetryType(telemetryType), location=locations[0])
 
 		if data and 'value' in data.keys():
 			answer = f"{data['value']} {self._telemetryUnits.get(telemetryType, '')}"
