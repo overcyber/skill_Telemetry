@@ -34,6 +34,7 @@ class Telemetry(AliceSkill):
 	@IntentHandler('GetTelemetryData')
 	@IntentHandler('AnswerTelemetryType')
 	def telemetryIntent(self, session: DialogSession):
+		locations = self.LocationManager.getLocationsForSession(sess=session, slotName='Location')
 		siteId = session.slotValue('Location', defaultValue=session.siteId)
 		telemetryType = session.slotValue('TelemetryType')
 
@@ -41,6 +42,14 @@ class Telemetry(AliceSkill):
 			self.continueDialog(
 				sessionId=session.sessionId,
 				text=self.randomTalk('noType'),
+				intentFilter=[Intent('AnswerTelemetryType')],
+				slot='Alice/TelemetryType'
+			)
+
+		if length(locations) != 1:
+			self.continueDialog(
+				sessionId=session.sessionId,
+				text="What location?!", #self.randomTalk('noType'),
 				intentFilter=[Intent('AnswerTelemetryType')],
 				slot='Alice/TelemetryType'
 			)
