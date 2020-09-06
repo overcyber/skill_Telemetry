@@ -46,7 +46,7 @@ class Telemetry(AliceSkill):
 				slot='Alice/TelemetryType'
 			)
 
-		if length(locations) != 1:
+		if len(locations) != 1:
 			self.continueDialog(
 				sessionId=session.sessionId,
 				text="What location?!", #self.randomTalk('noType'),
