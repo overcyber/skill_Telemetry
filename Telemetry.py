@@ -34,7 +34,7 @@ class Telemetry(AliceSkill):
 	@IntentHandler('GetTelemetryData')
 	@IntentHandler('AnswerTelemetryType')
 	def telemetryIntent(self, session: DialogSession):
-
+		locations = self.LocationManager.getLocationsForSession(sess=session, slotName='Location')
 		siteId = session.slotValue('Location', defaultValue=session.siteId)
 		telemetryType = session.slotValue('TelemetryType')
 
@@ -45,12 +45,22 @@ class Telemetry(AliceSkill):
 				intentFilter=[Intent('AnswerTelemetryType')],
 				slot='Alice/TelemetryType'
 			)
+			return
 
+		if len(locations) != 1:
+			self.continueDialog(
+				sessionId=session.sessionId,
+				text="What location?!", #self.randomTalk('noType'),
+				intentFilter=[Intent('AnswerTelemetryType')],
+				slot='Alice/TelemetryType'
+			)
+			return
 
-		data = self.TelemetryManager.getData(siteId=siteId, ttype=TelemetryType(telemetryType))
+		# siteId=locations[0].name,
+		data = self.TelemetryManager.getData(ttype=TelemetryType(telemetryType), location=locations[0])
 
 		if data and 'value' in data.keys():
 			answer = f"{data['value']} {self._telemetryUnits.get(telemetryType, '')}"
-			self.endDialog(sessionId=session.sessionId, text=self.randomTalk(text='answerInstant', replace=[answer]))
+			self.endDialog(sessionId=session.sessionId, text=self.randomTalk('answerInstant').format(answer))
 		else:
 			self.endDialog(sessionId=session.sessionId, text=self.randomTalk('noData'))
