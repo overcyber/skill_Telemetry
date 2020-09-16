@@ -34,11 +34,11 @@ class Telemetry(AliceSkill):
 	@IntentHandler('GetTelemetryData')
 	@IntentHandler('AnswerTelemetryType')
 	def telemetryIntent(self, session: DialogSession):
-		print(f'location in telemetry is {session}')
+
 		locations = self.LocationManager.getLocationsForSession(sess=session, slotName='Location')
 		siteId = session.slotValue('Location', defaultValue=session.siteId)
 		telemetryType = session.slotValue('TelemetryType')
-		print(f' locations value is {locations}')
+
 		if not telemetryType:
 			self.continueDialog(
 				sessionId=session.sessionId,
