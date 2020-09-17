@@ -34,6 +34,7 @@ class Telemetry(AliceSkill):
 	@IntentHandler('GetTelemetryData')
 	@IntentHandler('AnswerTelemetryType')
 	def telemetryIntent(self, session: DialogSession):
+
 		locations = self.LocationManager.getLocationsForSession(sess=session, slotName='Location')
 		siteId = session.slotValue('Location', defaultValue=session.siteId)
 		telemetryType = session.slotValue('TelemetryType')
@@ -61,6 +62,6 @@ class Telemetry(AliceSkill):
 
 		if data and 'value' in data.keys():
 			answer = f"{data['value']} {self._telemetryUnits.get(telemetryType, '')}"
-			self.endDialog(sessionId=session.sessionId, text=self.randomTalk('answerInstant').format(answer))
+			self.endDialog(sessionId=session.sessionId, text=self.randomTalk(text='answerInstant', replace=[answer]))
 		else:
 			self.endDialog(sessionId=session.sessionId, text=self.randomTalk('noData'))

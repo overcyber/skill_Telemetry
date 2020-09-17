@@ -120,7 +120,8 @@
 				"{how cold:=>TelemetryType} {outside:=>Location} please",
 				"please tell me how {humid:=>TelemetryType} it is in the {bathroom:=>Location}",
 				"what's the {temperature:=>TelemetryType} in the {living room:=>Location}",
-				"give me the {humidity:=>TelemetryType} in the {office:=>Location} please"
+				"give me the {humidity:=>TelemetryType} in the {office:=>Location} please",
+				"what's the {living room:=>Location} {temperature:=>TelemetryType}"
 			],
 			"slots": [
 				{
