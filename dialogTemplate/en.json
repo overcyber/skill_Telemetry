@@ -1,7 +1,5 @@
 {
 	"skill": "Telemetry",
-	"icon": "temperature",
-	"description": "Access your stored telemetry data",
 	"slotTypes": [
 		{
 			"name": "Alice/TelemetryType",
@@ -105,7 +103,6 @@
 	"intents": [
 		{
 			"name": "GetTelemetryData",
-			"description": "User asks for telemetry data",
 			"enabledByDefault": true,
 			"utterances": [
 				"what's the {temperature:=>TelemetryType}",
@@ -126,14 +123,12 @@
 			"slots": [
 				{
 					"name": "TelemetryType",
-					"description": "The type of data the user wants",
 					"required": false,
 					"type": "Alice/TelemetryType",
 					"missingQuestion": ""
 				},
 				{
 					"name": "Location",
-					"description": "The room where the data is from",
 					"required": false,
 					"type": "Alice/Location",
 					"missingQuestion": ""
@@ -142,7 +137,6 @@
 		},
 		{
 			"name": "AnswerTelemetryType",
-			"description": "User answers what telemetry type he wants",
 			"enabledByDefault": false,
 			"utterances": [
 				"{temperature:=>TelemetryType}",
@@ -153,7 +147,6 @@
 			"slots": [
 				{
 					"name": "TelemetryType",
-					"description": "The type of data the user wants",
 					"required": false,
 					"type": "Alice/TelemetryType",
 					"missingQuestion": ""
