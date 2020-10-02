@@ -1,20 +1,25 @@
 {
-	"name": "Telemetry",
-	"version": "1.2.3",
-	"icon": "fas fa-database",
-	"category": "alice",
-	"author": "ProjectAlice",
-	"maintainers": ["Psychokiller1888", "maxbachmann"],
-	"desc": "Access your stored telemetry data",
-	"aliceMinVersion": "1.0.0-a5",
-	"pipRequirements": [],
-	"systemRequirements": [],
-	"conditions": {
-		"lang": [
-			"en",
-			"de",
-			"it"
-		],
-		"activeManager": ["TelemetryManager"]
-	}
+    "name": "Telemetry",
+    "version": "1.2.4",
+    "icon": "fas fa-database",
+    "category": "alice",
+    "author": "ProjectAlice",
+    "maintainers": [
+        "Psychokiller1888",
+        "maxbachmann"
+    ],
+    "desc": "Access your stored telemetry data",
+    "aliceMinVersion": "1.0.0-a5",
+    "pipRequirements": [],
+    "systemRequirements": [],
+    "conditions": {
+        "lang": [
+            "en",
+            "de",
+            "it"
+        ],
+        "activeManager": [
+            "TelemetryManager"
+        ]
+    }
 }
