@@ -1,6 +1,6 @@
 {
     "name": "Telemetry",
-    "version": "1.2.4",
+    "version": "1.2.5",
     "icon": "fas fa-database",
     "category": "alice",
     "author": "ProjectAlice",
@@ -9,7 +9,7 @@
         "maxbachmann"
     ],
     "desc": "Access your stored telemetry data",
-    "aliceMinVersion": "1.0.0-a5",
+    "aliceMinVersion": "1.0.0-b3",
     "pipRequirements": [],
     "systemRequirements": [],
     "conditions": {
