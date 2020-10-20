@@ -1,0 +1,188 @@
+{
+	"skill": "Telemetry",
+	"slotTypes": [
+		{
+			"name": "Alice/TelemetryType",
+			"matchingStrictness": null,
+			"automaticallyExtensible": false,
+			"useSynonyms": true,
+			"values": [
+				{
+					"value": "temperature",
+					"synonyms": [
+						"ciepło",
+						"ciepłem",
+						"zimno",
+						"zimnem",
+						"temperatura",
+						"temperaturą",
+						"temperaturę",
+						"stopni"
+					]
+				},
+				{
+					"value": "pressure",
+					"synonyms": [
+						"barometer",
+						"barometerem",
+						"ciśnienie",
+						"ciśnieniem"
+					]
+				},
+				{
+					"value": "humidity",
+					"synonyms": [
+						"wilgotność",
+						"wilgotnością"
+					]
+				},
+				{
+					"value": "light",
+					"synonyms": [
+						"jasność",
+						"jasnością",
+						"nasłonecznienie",
+						"nasłonecznieniem"
+					]
+				},
+				{
+					"value": "gas",
+					"synonyms": []
+				},
+				{
+					"value": "airQuality",
+					"synonyms": [
+						"jakość powietrza",
+						"jakością powietrza",
+						"czystość powietrza",
+						"czystością powietrza",
+						"stan powietrza",
+						"stanem powietrza"
+					]
+				},
+				{
+					"value": "uvIndex",
+					"synonyms": [
+						"indeks uv",
+						"indeksem uv"
+					]
+				},
+				{
+					"value": "noise",
+					"synonyms": [
+						"hałas",
+						"hałasem",
+						"poziom hałasu",
+						"poziomem hałasu"
+					]
+				},
+				{
+					"value": "co2",
+					"synonyms": [
+						"CO2",
+						"dwutlenek węgla",
+						"dwutlenkiem węgla"
+					]
+				},
+				{
+					"value": "rain",
+					"synonyms": [
+						"deszcz",
+						"deszczem",
+						"opad",
+						"opadem",
+						"opadami",
+						"poziom opadów",
+						"poziomem opadów"
+					]
+				},
+				{
+					"value": "wind_strength",
+					"synonyms": [
+						"wiatr",
+						"wiatrem",
+						"prędkość wiatru",
+						"prędkością wiatru"
+					]
+				},
+				{
+					"value": "gust_strength",
+					"synonyms": [
+						"siła podmuchu",
+						"siłą podmuchu"
+					]
+				},
+				{
+					"value": "wind_angle",
+					"synonyms": [
+						"kierunek wiatru",
+						"kierunkiem wiatru"
+					]
+				},
+				{
+					"value": "gust_angle",
+					"synonyms": [
+						"kierunek podmuchu",
+						"kierunkiem podmuchu"
+					]
+				}
+			]
+		}
+	],
+	"intents": [
+		{
+			"name": "GetTelemetryData",
+			"enabledByDefault": true,
+			"utterances": [
+				"jaka jest {temperature:=>TelemetryType}",
+				"jak jest {ciepło:=>TelemetryType}",
+				"co wskazuje {termometr:=>TelemetryType}",
+				"co wskazuje {termometr:=>TelemetryType} w {piwnicy:=>Location}",
+				"jaka jest {temperature:=>TelemetryType} na {zewnątrz:=>Location}",
+				"jaka jest {jakość powietrza:=>TelemetryType} w {kuchni:=>Location}",
+				"jaki jest {kierunek wiatru:=>TelemetryType} na {zewnątrz:=>Location}",
+				"powiedz jaka jest {temperatura:=>TelemetryType} w {pokoju:=>Location}",
+				"czy na {pokoju:=>Location} jest {zimno:=>TelemetryType}",
+				"czy w {łazience:=>Location} jest {ciepło:=>TelemetryType}",
+				"ile jest {stopni:=>TelemetryType} w {sypialni:=>Location}",
+				"czy możesz mi powiedzieć jaka jest {siła wiatru:=>TelemetryType}",
+				"sprawdź {temperaturę:=>TelemetryType}",
+				"sprawdź {temperaturę:=>TelemetryType} w {sypialni:=>Location}",
+				"proszę sprawdź {temperaturę:=>TelemetryType} w {sypialni:=>Location}"
+			],
+			"slots": [
+				{
+					"name": "TelemetryType",
+					"required": false,
+					"type": "Alice/TelemetryType",
+					"missingQuestion": ""
+				},
+				{
+					"name": "Location",
+					"required": false,
+					"type": "Alice/Location",
+					"missingQuestion": ""
+				}
+			]
+		},
+		{
+			"name": "AnswerTelemetryType",
+			"enabledByDefault": false,
+			"utterances": [
+				"{temperatura:=>TelemetryType}",
+				"{wilgotność:=>TelemetryType} proszę",
+				"{wilgotność:=>TelemetryType} poproszę",
+				"powiedz mi o {poziomie hałasu:=>TelemetryType}",
+				"a jak z {indeksem uv:=>TelemetryType}"
+			],
+			"slots": [
+				{
+					"name": "TelemetryType",
+					"required": false,
+					"type": "Alice/TelemetryType",
+					"missingQuestion": ""
+				}
+			]
+		}
+	]
+}

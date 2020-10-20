@@ -12,3 +12,4 @@ Access your stored telemetry data
   - en
   - de
   - it
+  - pl
