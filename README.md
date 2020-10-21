@@ -6,7 +6,7 @@
 Access your stored telemetry data
 
 - Author: ProjectAlice
-- Maintainers: Psychokiller1888, maxbachmann
+- Maintainers: Psychokiller1888, maxbachmann, ChrisB85
 - Alice minimum Version: 1.0.0-a5
 - Languages:
   - en
