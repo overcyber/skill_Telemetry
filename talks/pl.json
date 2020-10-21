@@ -1,0 +1,27 @@
+{
+	"noType": {
+		"default": [
+			"Jakie dane mam sprawdzić?",
+			"Jakie dane chcesz sprawdzić?",
+			"Co chcesz sprawdzić?"
+		],
+		"short": [
+			"Jakie dane?",
+			"Jakie wartości"
+		]
+	},
+	"noData": {
+		"default": [
+			"Przepraszam, nie mam takich danych",
+			"Przepraszam, nie mam takich informacji",
+			"Wybacz, nie wiem",
+			"Wybacz, nie posiadam informacji na ten temat"
+		],
+		"short": [
+			"Nie wiem"
+		]
+	},
+	"answerInstant": [
+		"{}"
+	]
+}
