@@ -70,5 +70,11 @@
 		"dataType": "integer",
 		"isSensitive": false,
 		"description": "UV index at which a high UV alert is broadcasted"
+	},
+	"alertWhenSleeping": {
+		"defaultValue": "GasAlertHigh, CO2AlertHigh",
+		"dataType": "string",
+		"isSensitive": false,
+		"description": "Exclude list to allow being alerted when sleeping"
 	}
 }

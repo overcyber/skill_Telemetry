@@ -65,3 +65,17 @@ class Telemetry(AliceSkill):
 			self.endDialog(sessionId=session.sessionId, text=self.randomTalk(text='answerInstant', replace=[answer]))
 		else:
 			self.endDialog(sessionId=session.sessionId, text=self.randomTalk('noData'))
+
+
+	def dontAlertWhenSleeping(self, event: str) -> bool:
+		"""
+		Dont alert the user if they are sleeping unless overriden by the exception list
+		:param event - telemetry event name such as "NoiseAlert"
+		"""
+		if self.UserManager.checkIfAllUser('sleeping'):
+			if event not in self.getConfig('alertWhenSleeping'):
+				return True
+			else:
+				return False
+		else:
+			return False
