@@ -58,8 +58,9 @@ class Telemetry(AliceSkill):
 
 		data = self.TelemetryManager.getData(ttype=TelemetryType(telemetryType), locationId=locations[0].id)
 
-		if data and 'value' in data.keys():
-			answer = f"{data['value']} {self._telemetryUnits.get(telemetryType, '')}"
+		if data and 'value' in data[0].keys():
+			finalData = data[0]
+			answer = f"{finalData['value']} {self._telemetryUnits.get(telemetryType, '')}"
 			self.endDialog(sessionId=session.sessionId, text=self.randomTalk(text='answerInstant', replace=[answer]))
 		else:
 			self.endDialog(sessionId=session.sessionId, text=self.randomTalk('noData'))
