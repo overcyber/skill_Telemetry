@@ -18,7 +18,8 @@
             "en",
             "de",
             "it",
-            "pl"
+            "pl",
+	    "pt" 
         ],
         "activeManager": [
             "TelemetryManager"
