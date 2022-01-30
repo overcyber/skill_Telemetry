@@ -1,8 +1,8 @@
-from core.base.model.Intent import Intent
 from core.base.model.AliceSkill import AliceSkill
+from core.base.model.Intent import Intent
 from core.dialog.model.DialogSession import DialogSession
-from core.util.model.TelemetryType import TelemetryType
 from core.util.Decorators import IntentHandler
+from core.util.model.TelemetryType import TelemetryType
 
 
 class Telemetry(AliceSkill):
@@ -34,8 +34,17 @@ class Telemetry(AliceSkill):
 	@IntentHandler('GetTelemetryData')
 	@IntentHandler('AnswerTelemetryType')
 	def telemetryIntent(self, session: DialogSession):
+		location = session.slotValue(slotName='Location')
+		if not location:
+			location = session.locationId
+		else:
+			locationObject = self.LocationManager.getLocation(locationName=location)
+			if locationObject:
+				location = locationObject.id
+			else:
+				self.endDialog(sessionId=session.sessionId, text=self.randomTalk('noData'))
+				return
 
-		locations = self.LocationManager.getLocationsForSession(session=session, slotName='Location')
 		telemetryType = session.slotValue('TelemetryType')
 
 		if not telemetryType:
@@ -47,16 +56,7 @@ class Telemetry(AliceSkill):
 			)
 			return
 
-		if len(locations) != 1:
-			self.continueDialog(
-				sessionId=session.sessionId,
-				text="What location?!", #self.randomTalk('noType'),
-				intentFilter=[Intent('AnswerTelemetryType')],
-				slot='Alice/TelemetryType'
-			)
-			return
-
-		data = self.TelemetryManager.getData(ttype=TelemetryType(telemetryType), locationId=locations[0].id)
+		data = self.TelemetryManager.getData(ttype=TelemetryType(telemetryType), locationId=location)
 
 		if data and 'value' in data[0].keys():
 			finalData = data[0]
@@ -68,7 +68,7 @@ class Telemetry(AliceSkill):
 
 	def dontAlertWhenSleeping(self, event: str) -> bool:
 		"""
-		Dont alert the user if they are sleeping unless overriden by the exception list
+		Don't alert the user if they are sleeping unless overridden by the exception list
 		:param event - telemetry event name such as "NoiseAlert"
 		"""
 		if self.UserManager.checkIfAllUser('sleeping'):
