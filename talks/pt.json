@@ -1,22 +1,22 @@
 {
 	"noType": {
 		"default": [
-			"What data do you want me to check?",
-			"What type of telemetry data?",
-			"What do you want to check?"
+			"Quais dados você quer que eu verifique?",
+			"Que tipo de dados de telemetria?",
+			"O que você quer verificar?"
 		],
 		"short": [
-			"What data?"
+			"Qual dado?"
 		]
 	},
 	"noData": {
 		"default": [
-			"Sorry, I don't seem to have this data",
-			"I'm so sorry, but I can't tell",
-			"I don't have data to answer you with"
+			"Desculpe, parece que não tenho esses dados",
+			"Sinto muito, mas não sei dizer",
+			"Não tenho dados para te responder"
 		],
 		"short": [
-			"don't know"
+			"não sei"
 		]
 	},
 	"answerInstant": [
