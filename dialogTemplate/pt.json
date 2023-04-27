@@ -10,26 +10,26 @@
 				{
 					"value": "temperature",
 					"synonyms": [
-						"how warm",
-						"how cold"
+						"que calor ",
+						"que frio "
 					]
 				},
 				{
 					"value": "pressure",
 					"synonyms": [
-						"barometer"
+						"barômetro"
 					]
 				},
 				{
 					"value": "humidity",
 					"synonyms": [
-						"humid"
+						"úmido"
 					]
 				},
 				{
 					"value": "light",
 					"synonyms": [
-						"luminosity"
+						"luminosidade"
 					]
 				},
 				{
@@ -39,62 +39,62 @@
 				{
 					"value": "airQuality",
 					"synonyms": [
-						"air quality",
-						"quality of the air"
+						"quanlidade do ar",
+						"densidade do ar"
 					]
 				},
 				{
 					"value": "uvIndex",
 					"synonyms": [
-						"uv index"
+						"índice UV"
 					]
 				},
 				{
 					"value": "noise",
 					"synonyms": [
-						"noisy",
-						"how loud"
+						"barulho",
+						"quão alto"
 					]
 				},
 				{
 					"value": "co2",
 					"synonyms": [
 						"CO2",
-						"carbon dioxide"
+						"dioxido de carbono"
 					]
 				},
 				{
 					"value": "rain",
 					"synonyms": [
-						"rainy",
-						"raining"
+						"chuvoso",
+						"chovendo"
 					]
 				},
 				{
 					"value": "wind_strength",
 					"synonyms": [
-						"wind",
-						"wind strength"
+						"vento",
+						"força do vento"
 					]
 				},
 				{
 					"value": "gust_strength",
 					"synonyms": [
-						"gust strength"
+						"força da rajada"
 					]
 				},
 				{
 					"value": "wind_angle",
 					"synonyms": [
-						"wind angle",
-						"wind direction"
+						"ângulo do vento",
+						"direção do vento"
 					]
 				},
 				{
 					"value": "gust_angle",
 					"synonyms": [
-						"gust angle",
-						"gust direction"
+						"ângulo de rajada",
+						"direção da rajada"
 					]
 				}
 			]
@@ -105,20 +105,20 @@
 			"name": "GetTelemetryData",
 			"enabledByDefault": true,
 			"utterances": [
-				"what's the {temperature:=>TelemetryType}",
-				"what's the {humidity:=>TelemetryType} {outside:=>Location}",
-				"tell me the {noise:=>TelemetryType} level in the {living room:=>Location}",
-				"how much is it {raining:=>TelemetryType}",
-				"can you please tell me the {wind strength:=>TelemetryType}",
-				"check the {uv index:=>TelemetryType} for me please",
-				"how much {carbon dioxide:=>TelemetryType} in the {bedroom:=>Location}",
-				"how is the {air quality:=>TelemetryType} in the {kitchenb:=>Location}",
-				"{how warm:=>TelemetryType} is it in the {kitchen:=>Location}",
-				"{how cold:=>TelemetryType} {outside:=>Location} please",
-				"please tell me how {humid:=>TelemetryType} it is in the {bathroom:=>Location}",
-				"what's the {temperature:=>TelemetryType} in the {living room:=>Location}",
-				"give me the {humidity:=>TelemetryType} in the {office:=>Location} please",
-				"what's the {living room:=>Location} {temperature:=>TelemetryType}"
+				"Qual é a {temperatura:=>TelemetryType}",
+				"Qual é a {umidade:=>TelemetryType} {fora:=>Location}",
+				"diga me o nivel de {barulho:=>TelemetryType} na {sala de tv:=>Location}",
+				"o quanto está {chovendo:=>TelemetryType}",
+				"você pode me dizer por favor a{força do vento:=>TelemetryType}",
+				"cheque o  {índice UV:=>TelemetryType} para mim por favor",
+				"quanto está o {dioxido de carbono:=>TelemetryType} no meu {quarto:=>Location}",
+				"como está a {qualidade do ar:=>TelemetryType} na {cozinha:=>Location}",
+				"{quão quente:=>TelemetryType} está na {cozinha:=>Location}",
+				"{quão frio :=>TelemetryType} está do lado de {fora:=>Location} por favor",
+				"por favor me diga como está a {umidade:=>TelemetryType} no meu {quarto:=>Location}",
+				"qual a {temperatura:=>TelemetryType} na {sala de tv:=>Location}",
+				"me diga qual a  {umidade:=>TelemetryType} no  {escritório:=>Location} por favor",
+				"na {sala de tv=>Location} qual é a {temperatura:=>TelemetryType}"
 			],
 			"slots": [
 				{
@@ -139,10 +139,10 @@
 			"name": "AnswerTelemetryType",
 			"enabledByDefault": false,
 			"utterances": [
-				"{temperature:=>TelemetryType}",
-				"{humidity:=>TelemetryType} please",
-				"tell me the {noise:=>TelemetryType}",
-				"tell me the {uv index:=>TelemetryType} please"
+				"{temperatura:=>TelemetryType}",
+				"{umidade:=>TelemetryType} por favor",
+				"diga me o {barulho:=>TelemetryType}",
+				"diga me o  {índice uv :=>TelemetryType} por favor"
 			],
 			"slots": [
 				{
